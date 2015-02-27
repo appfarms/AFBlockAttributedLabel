@@ -94,6 +94,7 @@
 
 - (void) setDidSelectLinkWithURLBlock:(void(^)(NSURL * url))block
 {
+  self.delegate = self;
   if (block)
   {
     self.blocks[kDidSelectLinkWithURLBlockKey] = [block copy];
